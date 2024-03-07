@@ -106,6 +106,7 @@ export default function AdminEditProduct() {
       comments,
       photo
     );
+    
 
     let apiAddress = getBase() + "update_product.php";
     let form = new FormData();
@@ -378,6 +379,7 @@ export default function AdminEditProduct() {
                                   Save changes
                                 </button>
                                 <button
+                                
                                   type="reset"
                                   className="btn btn-secondary"
                                 >

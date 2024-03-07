@@ -21,6 +21,17 @@ export default function AdminAddProduct() {
   let [selectedCategory, setSelectedCategory] = useState("");
   let [isLive, setIsLive] = useState("");
 
+  let resetForm = function () {
+    //reset name to ''
+    setName('');
+    setWeight('');
+    setPrice('');
+    setWeight('');
+    setSize('');
+    setComments('');
+    setStock('');
+  }
+
   let AddProduct = function (e) {
     e.preventDefault(); //required to stop submitting form & refreshing web page
     console.log(name, price, file, stock, size, weight, comments, isLive);
@@ -279,7 +290,7 @@ export default function AdminAddProduct() {
                             <button type="submit" className="btn btn-primary">
                               Save changes
                             </button>
-                            <button type="reset" className="btn btn-secondary">
+                            <button  onClick={resetForm} type="reset" className="btn btn-secondary">
                               Clear all
                             </button>
                           </div>

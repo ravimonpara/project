@@ -14,6 +14,14 @@ export default function AdminAddCategory() {
   let [photo, setPhoto] = useState();
   let [islive, setIsLive] = useState();
 
+  let resetForm = function () {
+    //reset name to ''
+    setTitle('');
+    setPhoto('');
+    setIsLive('');
+    
+  }
+
   let AddCategory = function (event) {
     event.preventDefault(); //required to stop submitting form & refreshing web page
     console.log(title, photo, islive);
@@ -148,7 +156,7 @@ export default function AdminAddCategory() {
                           <button type="submit" className="btn btn-primary">
                             Submit
                           </button>
-                          <button type="reset" className="btn btn-secondary">
+                          <button onClick={resetForm } type="reset" className="btn btn-secondary">
                             Clear all
                           </button>
                         </div>
